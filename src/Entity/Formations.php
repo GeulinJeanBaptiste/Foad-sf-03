@@ -22,6 +22,9 @@ class Formations
     #[ORM\Column(length: 255)]
     private ?string $textexplicatif = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $durée = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -59,6 +62,18 @@ class Formations
     public function setTextexplicatif(string $textexplicatif): static
     {
         $this->textexplicatif = $textexplicatif;
+
+        return $this;
+    }
+
+    public function getDurée(): ?string
+    {
+        return $this->durée;
+    }
+
+    public function setDurée(string $durée): static
+    {
+        $this->durée = $durée;
 
         return $this;
     }
