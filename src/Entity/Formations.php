@@ -17,13 +17,13 @@ class Formations
     private ?string $titre = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $résumé = null;
+    private ?string $resume = null;
 
     #[ORM\Column(length: 255)]
     private ?string $textexplicatif = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $durée = null;
+    private ?string $duree = null;
 
     #[ORM\Column(length: 255)]
     private ?string $niveau = null;
@@ -48,14 +48,14 @@ class Formations
         return $this;
     }
 
-    public function getRésumé(): ?string
+    public function getResume(): ?string
     {
-        return $this->résumé;
+        return $this->resume;
     }
 
-    public function setRésumé(string $résumé): static
+    public function setResume(string $resume): static
     {
-        $this->résumé = $résumé;
+        $this->resume = $resume;
 
         return $this;
     }
@@ -72,14 +72,14 @@ class Formations
         return $this;
     }
 
-    public function getDurée(): ?string
+    public function getDuree(): ?string
     {
-        return $this->durée;
+        return $this->duree;
     }
 
-    public function setDurée(string $durée): static
+    public function setDuree(string $duree): static
     {
-        $this->durée = $durée;
+        $this->duree = $duree;
 
         return $this;
     }

@@ -13,9 +13,9 @@ class FormationsType extends AbstractType
     {
         $builder
             ->add('titre')
-            ->add('résumé')
+            ->add('resume')
             ->add('textexplicatif')
-            ->add('durée')
+            ->add('duree')
             ->add('niveau')
             ->add('lieu')
         ;
