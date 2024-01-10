@@ -16,6 +16,9 @@ class Formations
     #[ORM\Column(length: 255)]
     private ?string $titre = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $résumé = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -29,6 +32,18 @@ class Formations
     public function setTitre(string $titre): static
     {
         $this->titre = $titre;
+
+        return $this;
+    }
+
+    public function getRésumé(): ?string
+    {
+        return $this->résumé;
+    }
+
+    public function setRésumé(string $résumé): static
+    {
+        $this->résumé = $résumé;
 
         return $this;
     }
