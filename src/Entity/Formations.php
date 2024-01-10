@@ -25,6 +25,9 @@ class Formations
     #[ORM\Column(length: 255)]
     private ?string $durée = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $niveau = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -74,6 +77,18 @@ class Formations
     public function setDurée(string $durée): static
     {
         $this->durée = $durée;
+
+        return $this;
+    }
+
+    public function getNiveau(): ?string
+    {
+        return $this->niveau;
+    }
+
+    public function setNiveau(string $niveau): static
+    {
+        $this->niveau = $niveau;
 
         return $this;
     }
