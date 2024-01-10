@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-#[Route('/formations')]
+#[Route('/')]
 class FormationsController extends AbstractController
 {
     #[Route('/', name: 'app_formations_index', methods: ['GET'])]
@@ -71,7 +71,7 @@ class FormationsController extends AbstractController
     #[Route('/{id}', name: 'app_formations_delete', methods: ['POST'])]
     public function delete(Request $request, Formations $formation, EntityManagerInterface $entityManager): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$formation->getId(), $request->request->get('_token'))) {
+        if ($this->isCsrfTokenValid('delete' . $formation->getId(), $request->request->get('_token'))) {
             $entityManager->remove($formation);
             $entityManager->flush();
         }
