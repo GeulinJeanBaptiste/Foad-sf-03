@@ -18,7 +18,7 @@ class FormationsController extends AbstractController
     public function index(FormationsRepository $formationsRepository): Response
     {
         return $this->render('formations/index.html.twig', [
-            'formations' => $formationsRepository->findAll(),
+            'formations' => $formationsRepository->findBy([], ['duration' => 'ASC']),
         ]);
     }
 

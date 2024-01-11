@@ -15,7 +15,8 @@ class FormationsType extends AbstractType
             ->add('titre')
             ->add('resume')
             ->add('textexplicatif')
-            ->add('duree')
+            // ->add('duree')
+            ->add('duration')
             ->add('niveau')
             ->add('lieu')
         ;
