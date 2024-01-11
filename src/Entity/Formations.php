@@ -31,6 +31,9 @@ class Formations
     #[ORM\Column(length: 255)]
     private ?string $lieu = null;
 
+    #[ORM\Column]
+    private ?int $duration = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -104,6 +107,18 @@ class Formations
     public function setLieu(string $lieu): static
     {
         $this->lieu = $lieu;
+
+        return $this;
+    }
+
+    public function getDuration(): ?int
+    {
+        return $this->duration;
+    }
+
+    public function setDuration(int $duration): static
+    {
+        $this->duration = $duration;
 
         return $this;
     }
